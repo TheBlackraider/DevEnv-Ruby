@@ -9,14 +9,14 @@ USER root
 RUN pacman -Syu --noconfirm
 RUN pacman-db-upgrade
 
-RUN pacman -S --noconfirm ruby ruby-docs
+RUN pacman -S --noconfirm ruby ruby-docs nodejs zlib
 
 USER developer
 
 RUN mkdir -p /home/developer/projects/ruby
 RUN mkdir -p /home/developer/projects/rails
 
-RUN gem install bundler rails haml-rails twitter-bootstrap-rails pry-rails awesome_print devise compass better_errors pry pry-doc annotate sinatra commander tty ruby-progressbar paint mechanize
+RUN gem install bundler rails haml-rails twitter-bootstrap-rails pry-rails awesome_print devise compass better_errors pry pry-doc annotate sinatra commander ttyruby-progressbar paint mechanize
 
 RUN sed -i '$ a export PATH=$PATH:/home/developer/.gem/ruby/2.3.0/bin/' /home/developer/.bashrc
 
