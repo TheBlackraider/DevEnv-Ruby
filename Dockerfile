@@ -15,8 +15,6 @@ USER developer
 
 ADD .vimrc /home/developer
 
-RUN chown 755 /home/developer/.vimrc
-
 RUN mkdir -p /home/developer/projects/ruby
 RUN mkdir -p /home/developer/projects/rails
 
