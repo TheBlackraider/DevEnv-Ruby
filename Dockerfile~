@@ -20,9 +20,9 @@ RUN gem install bundler rails haml-rails twitter-bootstrap-rails pry-rails aweso
 
 RUN gem install cool.io ione childprocess json_pure thor ffi daemons hike highline rubyzip fspath data_mapper curses archive-tar-minitar getopt pry-windows windows_gui ocra
 
-RUN sed -i '$ a export PATH=$PATH:/home/developer/.gem/ruby/2.6.0/bin/' /home/developer/.bashrc
+#RUN sed -i '$ a export PATH=$PATH:/home/developer/.gem/ruby/2.3.0/bin/' /home/developer/.bashrc
 
-RUN sed -i '$ a export PATH=$PATH:/home/developer/.gem/ruby/2.6.0/bin/' /home/developer/.zshrc
+#RUN sed -i '$ a export PATH=$PATH:/home/developer/.gem/ruby/2.3.0/bin/' /home/developer/.zshrc
 
 
 VOLUME /home/developer/projects/ruby
